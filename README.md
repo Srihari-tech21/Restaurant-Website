@@ -30,6 +30,10 @@ A modern and responsive restaurant website developed using HTML5, CSS3, JavaScri
 
 https://srihari-tech21.github.io/Restaurant-Website/
 
+## 📸 Website Preview
+
+![Website Preview](homepage.png)
+
 ---
 
 ## 📂 Pages Included
