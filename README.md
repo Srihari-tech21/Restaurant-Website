@@ -32,7 +32,7 @@ https://srihari-tech21.github.io/Restaurant-Website/
 
 ## 📸 Website Preview
 
-![Website Preview](homepage.png)
+![Website Preview](screenshot.png)
 
 ---
 
