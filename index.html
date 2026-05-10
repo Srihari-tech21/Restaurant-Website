@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>Authentic Indian Restaurant</title>
+    <style>
+        .header-bar {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .logo-container {
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            z-index: 10;
+        }
+        .logo-container img {
+            height: 80px;
+        }
+        .restaurant-name {
+            background-color: #ff6600;
+            padding: 15px 30px;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+            margin-left: 120px;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff6600 !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .btn-hero {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn-hero:hover {
+            background-color: #e55800;
+            color: white;
+        }
+        .feature-section {
+            padding: 50px 0;
+        }
+        .feature-box {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            border: 2px solid #ff6600;
+            transition: transform 0.3s;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 48px;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            color: #ff6600;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+        .menu-preview {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff6600;
+        }
+        .menu-item-name {
+            color: #ff6600;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .menu-item-price {
+            float: right;
+            color: white;
+            font-weight: bold;
+        }
+        .testimonial {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 2px solid #ff6600;
+            color:white;
+        }
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            
+        }
+        .testimonial-author {
+            color: #ff6600;
+            font-weight: bold;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- Combined Header Bar - Logo and Restaurant Name -->
+    <div class="header-bar">
+        <div class="logo-container">
+            <img src="logo2.png" alt="Restaurant Logo">
+        </div>
+        <div class="restaurant-name">
+            AUTHENTIC INDIAN RESTAURANT
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registrationform.html">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            
+            <h1>Welcome to Authentic Indian Restaurant</h1>
+            <p>Experience authentic flavors of Indian cuisine from North to South</p>
+            <a href="menu.html" class="btn-hero">View Our Menu</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container feature-section">
+        <h2 class="section-title">Why Choose Authentic Indian Restaurant?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="feature-box">
+                    <div class="feature-icon">🍽️</div>
+                    <h4 style="color: #ff6600;">Authentic Indian</h4>
+                    <p>Traditional recipes passed down through generations, bringing you the true taste of India.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-box">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h4 style="color: #ff6600;">Master Chefs</h4>
+                    <p>Our expert chefs specialize in various regional Indian cuisines with decades of experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-box">
+                    <div class="feature-icon">🌶️</div>
+                    <h4 style="color: #ff6600;">Fresh Spices</h4>
+                    <p>We use only the finest fresh spices and ingredients imported directly from India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Preview Section -->
+    <div class="container" style="margin-bottom: 50px;">
+        <h2 class="section-title">Featured Indian Dishes</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="menu-preview">
+                    <div class="menu-item-name">Butter Chicken</div>
+                    <div class="menu-item-price">₹320</div>
+                    <p class="text-muted">Creamy tomato curry with tender chicken pieces, our signature dish</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="menu-preview">
+                    <div class="menu-item-name">Paneer Tikka</div>
+                    <div class="menu-item-price">₹280</div>
+                    <p class="text-muted">Grilled cottage cheese marinated in aromatic spices</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="menu-preview">
+                    <div class="menu-item-name">Biryani Special</div>
+                    <div class="menu-item-price">₹350</div>
+                    <p class="text-muted">Fragrant basmati rice with aromatic spices and your choice of meat</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="menu-preview">
+                    <div class="menu-item-name">Masala Dosa</div>
+                    <div class="menu-item-price">₹180</div>
+                    <p class="text-muted">Crispy South Indian pancake with potato filling and sambar</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="menu.html" class="btn-hero">View Full Menu</a>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container" style="margin-bottom: 50px;">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Amazing food and wonderful atmosphere! The variety of cuisines is incredible."
+                    </div>
+                    <div class="testimonial-author">- Arjun kumar</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Best multi-cuisine restaurant in town! The service is exceptional and the food is always fresh."
+                    </div>
+                    <div class="testimonial-author">- Prabhas</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "A culinary journey around the world in one place. Highly recommend!"
+                    </div>
+                    <div class="testimonial-author">- vyshnavi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="container text-center" style="margin-bottom: 50px;">
+        <div style="background-color: #1a1a1a; border-radius: 10px; padding: 40px; border: 2px solid #ff6600;">
+            <h2 style="color: #ff6600; margin-bottom: 20px;">Ready to Experience Authentic Indian Cuisine?</h2>
+            <p class="mb-4">Book your table now and savor the true flavors of India</p>
+            <a href="contact.html" class="btn-hero">Make a Reservation</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

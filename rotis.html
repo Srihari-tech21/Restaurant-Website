@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>Breads & Rice - Authentic Indian Restaurant</title>
+    <style>
+        .header-bar {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .logo-container {
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            z-index: 10;
+        }
+        .logo-container img {
+            height: 80px;
+        }
+        .restaurant-name {
+            background-color: #ff6600;
+            padding: 15px 30px;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+            margin-left: 120px;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff6600 !important;
+        }
+        .menu-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            color: #ff6600;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .category-title {
+            color: #ff6600;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: 50px;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .menu-item {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff6600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateX(5px);
+            background-color: #2a2a2a;
+        }
+        .item-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: #ff6600;
+        }
+        .item-description {
+            color: #ccc;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .item-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            float: right;
+        }
+        .badge-veg {
+            background-color: #28a745;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 10px;
+            color:white;
+        }
+        .badge-nonveg {
+            background-color: #dc3545;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 10px;
+            color:white;
+        }
+        .badge-spicy {
+            background-color: #ff6600;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 5px;
+            color:white;
+        }
+        .search-container {
+            margin-bottom: 30px;
+        }
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            border: 2px solid #ff6600;
+            border-radius: 25px;
+            background-color: #1a1a1a;
+            color: white;
+            font-size: 16px;
+            margin: 0 auto;
+            display: block;
+        }
+        .search-input::placeholder {
+            color: #ccc;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #ff8800;
+            box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+        }
+        .no-results {
+            text-align: center;
+            color: #ff6600;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .search-results {
+            margin-top: 30px;
+        }
+        .search-result-item {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff6600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .search-result-item:hover {
+            transform: translateX(5px);
+            background-color: #3a3a3a;
+        }
+        .search-result-category {
+            color: #ff6600;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Combined Header Bar - Logo and Restaurant Name -->
+    <div class="header-bar">
+        <div class="logo-container">
+            <img src="logo2.png" alt="Restaurant Logo">
+        </div>
+        <div class="restaurant-name">
+            AUTHENTIC INDIAN RESTAURANT
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrationform.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-container">
+         <h1 class="text-center mb-4" style="color: #ff6600;">Our Indian Menu</h1>
+         
+         <!-- Search Bar -->
+         <div class="search-container">
+             <input type="text" class="search-input" id="searchInput" placeholder="Search menu items...">
+         </div>
+         <div class="search-results" id="searchResults"></div>
+         
+         <!-- Navigation Links -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+<a href="menu.html" class="btn btn-outline-warning text-white" style="border-color: #ff6600; color: white; padding: 10px 20px;">Starters</a>
+                    <a href="rotis.html" class="btn btn-outline-warning text-white" style="border-color: #ff6600; color: white; padding: 10px 20px;">Roti's & Indian breads</a>
+                    <a href="curries.html" class="btn btn-outline-warning text-white" style="border-color: #ff6600; color: white; padding: 10px 20px;">Curries</a>
+                    <a href="biryani.html" class="btn btn-outline-warning text-white" style="border-color: #ff6600; color: white; padding: 10px 20px;">biryanis</a>
+                    <a href="desserts.html" class="btn btn-outline-warning text-white" style="border-color: #ff6600; color: white; padding: 10px 20px;">Desserts</a>
+                    <a href="beverages.html" class="btn btn-outline-warning text-white" style="border-color: #ff6600; color: white; padding: 10px 20px;">Beverages</a>
+                </div>
+            </div>
+        </div>
+        
+         <!-- Tab Content -->
+        <div class="tab-content" id="menuTabContent">
+            <!-- Starters -->
+            <div class="tab-pane fade show active" id="starters" role="tabpanel">
+        <h2 class="category-title">Roti's & Indian Breads</h2>
+
+        <div class="menu-item">
+            <span class="item-price">₹30</span>
+            <div class="item-name">
+                Tandoori Roti
+                <span class="badge-veg">Veg</span>
+            </div>
+            <div class="item-description">Whole wheat bread baked in tandoor</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-price">₹50</span>
+            <div class="item-name">
+                Butter Naan
+                <span class="badge-veg">Veg</span>
+            </div>
+            <div class="item-description">Soft refined flour bread topped with butter</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-price">₹70</span>
+            <div class="item-name">
+                Garlic Naan
+                <span class="badge-veg">Veg</span>
+            </div>
+            <div class="item-description">Naan flavored with garlic and coriander</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-price">₹80</span>
+            <div class="item-name">
+                Butter Kulcha
+                <span class="badge-veg">Veg</span>
+            </div>
+            <div class="item-description">Stuffed bread baked in clay oven</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-price">₹60</span>
+            <div class="item-name">
+                Laccha Paratha
+                <span class="badge-veg">Veg</span>
+            </div>
+            <div class="item-description">Layered flaky whole wheat bread</div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <script>
+        // Unified menu data from all categories
+        const allMenuItems = {
+            starters: [
+                {name: "Paneer Tikka", description: "Cubes of cottage cheese marinated in aromatic spices and grilled in tandoor", price: "₹180", type: "veg", page: "menu.html"},
+                {name: "Veg Manchuria", description: "Crispy vegetable balls tossed in Indo-Chinese sauce", price: "₹220", type: "veg", page: "menu.html", spicy: true},
+                {name: "Gobi 65", description: "Deep-fried cauliflower florets with spicy masala", price: "₹210", type: "veg", page: "menu.html", spicy: true},
+                {name: "Hara Bhara Kebab", description: "Spinach and green pea patties shallow fried", price: "₹230", type: "veg", page: "menu.html"},
+                {name: "Crispy Corn", description: "Fried sweet corn tossed with spices and herbs", price: "₹160", type: "veg", page: "menu.html", spicy: true},
+                {name: "Chicken Tikka", description: "Boneless chicken marinated in yogurt and spices", price: "₹320", type: "nonveg", page: "menu.html"},
+                {name: "Chicken 65", description: "Spicy deep-fried chicken bites with curry leaves", price: "₹300", type: "nonveg", page: "menu.html", spicy: true},
+                {name: "Tandoori Chicken", description: "Chicken roasted in clay oven with smoky flavor", price: "₹380", type: "nonveg", page: "menu.html", spicy: true},
+                {name: "Apollo Fish", description: "Boneless fish cubes tossed in spicy Andhra masala", price: "₹360", type: "nonveg", page: "menu.html"},
+                {name: "Mutton Seekh Kebab", description: "Minced mutton skewers grilled with herbs and spices", price: "₹420", type: "nonveg", page: "menu.html", spicy: true}
+            ],
+            rotis: [
+                {name: "Tandoori Roti", description: "Whole wheat bread baked in tandoor", price: "₹30", type: "veg", page: "rotis.html"},
+                {name: "Butter Naan", description: "Soft refined flour bread topped with butter", price: "₹50", type: "veg", page: "rotis.html"},
+                {name: "Garlic Naan", description: "Naan flavored with garlic and coriander", price: "₹70", type: "veg", page: "rotis.html"},
+                {name: "Butter Kulcha", description: "Stuffed bread baked in clay oven", price: "₹80", type: "veg", page: "rotis.html"},
+                {name: "Laccha Paratha", description: "Layered flaky whole wheat bread", price: "₹60", type: "veg", page: "rotis.html"}
+            ],
+            curries: [
+                {name: "Paneer Butter Masala", description: "Cubes of cottage cheese in rich creamy tomato gravy", price: "₹220", type: "veg", page: "curries.html"},
+                {name: "Palak Paneer", description: "Cottage cheese cooked in spinach gravy", price: "₹200", type: "veg", page: "curries.html"},
+                {name: "Dal Makhani", description: "Creamy black lentils simmered with butter and spices", price: "₹180", type: "veg", page: "curries.html"},
+                {name: "Mixed Vegetable Curry", description: "Seasonal vegetables cooked in aromatic gravy", price: "₹160", type: "veg", page: "curries.html"},
+                {name: "Chicken Butter Masala", description: "Tender chicken pieces in rich buttery tomato gravy", price: "₹280", type: "nonveg", page: "curries.html"},
+                {name: "Mutton Rogan Josh", description: "Kashmiri-style mutton curry with aromatic spices", price: "₹350", type: "nonveg", page: "curries.html", spicy: true},
+                {name: "Fish Curry", description: "Fresh fish cooked in tangy coconut-based gravy", price: "₹260", type: "nonveg", page: "curries.html"}
+            ],
+            biryanis: [
+                {name: "Veg Dum Biryani", description: "Fragrant basmati rice cooked with vegetables and spices", price: "₹260", type: "veg", page: "biryani.html"},
+                {name: "Paneer Biryani", description: "Spiced rice layered with marinated paneer", price: "₹290", type: "veg", page: "biryani.html", spicy: true},
+                {name: "Kaju Biryani", description: "Spiced rice layered with full of fried kaju", price: "₹280", type: "veg", page: "biryani.html"},
+                {name: "Mushroom Biryani", description: "Spiced rice layered with marinated mushroom", price: "₹270", type: "veg", page: "biryani.html"},
+                {name: "Avakay Biryani", description: "A fiery and tangy Andhra specialty with raw mango pickle flavor", price: "₹280", type: "veg", page: "biryani.html", spicy: true},
+                {name: "Chicken Dum Biryani", description: "Hyderabad-style chicken biryani slow cooked on dum", price: "₹340", type: "nonveg", page: "biryani.html"},
+                {name: "Mutton Biryani", description: "Aromatic rice cooked with tender mutton pieces", price: "₹450", type: "nonveg", page: "biryani.html", spicy: true},
+                {name: "Fish Biryani", description: "Coastal-style biryani prepared with spicy fish masala", price: "₹380", type: "nonveg", page: "biryani.html", spicy: true},
+                {name: "Prawn Biryani", description: "Basmati rice cooked with juicy prawns and spices", price: "₹420", type: "nonveg", page: "biryani.html"},
+                {name: "Ulvacharu biryani", description: "Andhra-style biryani with horse gram soup and chicken or veggies", price: "₹370", type: "nonveg", page: "biryani.html", spicy: true}
+            ],
+            desserts: [
+                {name: "Gulab Jamun", description: "Soft milk dumplings soaked in rose-flavored sugar syrup", price: "₹80", type: "veg", page: "desserts.html"},
+                {name: "Rasmalai", description: "Soft cottage cheese patties in creamy milk syrup", price: "₹90", type: "veg", page: "desserts.html"},
+                {name: "Kheer", description: "Traditional rice pudding with nuts and cardamom", price: "₹70", type: "veg", page: "desserts.html"},
+                {name: "Ice Cream", description: "Assorted flavors of premium ice cream", price: "₹100", type: "veg", page: "desserts.html"}
+            ],
+            beverages: [
+                {name: "Masala Chai", description: "Spiced Indian tea with milk and sugar", price: "₹40", type: "veg", page: "beverages.html"},
+                {name: "Filter Coffee", description: "Traditional South Indian filtered coffee", price: "₹45", type: "veg", page: "beverages.html"},
+                {name: "Fresh Lime Soda", description: "Refreshing lime drink with soda and spices", price: "₹50", type: "veg", page: "beverages.html"},
+                {name: "Mango Lassi", description: "Sweet yogurt drink with mango pulp", price: "₹60", type: "veg", page: "beverages.html"},
+                {name: "Badam Milk", description: "Nutritious almond milk with cardamom", price: "₹55", type: "veg", page: "beverages.html"}
+            ]
+        };
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const searchResults = document.getElementById('searchResults');
+            
+            if (searchTerm === '') {
+                searchResults.innerHTML = '';
+                // Show current page items
+                const currentPageItems = document.querySelectorAll('.menu-item');
+                currentPageItems.forEach(item => item.style.display = 'block');
+                return;
+            }
+            
+            const results = [];
+            
+            // Search across all categories
+            Object.keys(allMenuItems).forEach(category => {
+                allMenuItems[category].forEach(item => {
+                    const nameMatch = item.name.toLowerCase().includes(searchTerm);
+                    const descMatch = item.description.toLowerCase().includes(searchTerm);
+                    
+                    if (nameMatch || descMatch) {
+                        results.push({...item, category: category});
+                    }
+                });
+            });
+            
+            // Hide current page items when searching
+            const currentPageItems = document.querySelectorAll('.menu-item');
+            currentPageItems.forEach(item => item.style.display = 'none');
+            
+            // Display search results
+            if (results.length > 0) {
+                let resultsHTML = '<h3 class="category-title">Search Results</h3>';
+                results.forEach(item => {
+                    const categoryDisplay = item.category.charAt(0).toUpperCase() + item.category.slice(1);
+                    const spicyBadge = item.spicy ? '<span class="badge-spicy">Spicy</span>' : '';
+                    const typeBadge = item.type === 'veg' ? 
+                        '<span class="badge-veg">Veg</span>' : 
+                        '<span class="badge-nonveg">Non Veg</span>';
+                    
+                    resultsHTML += `
+                        <div class="search-result-item" onclick="window.location.href='${item.page}'">
+                            <div class="search-result-category">${categoryDisplay}</div>
+                            <span class="item-price">${item.price}</span>
+                            <div class="item-name">
+                                ${item.name}
+                                ${typeBadge}
+                                ${spicyBadge}
+                            </div>
+                            <div class="item-description">${item.description}</div>
+                        </div>
+                    `;
+                });
+                searchResults.innerHTML = resultsHTML;
+            } else {
+                searchResults.innerHTML = '<div class="no-results">No menu items found matching your search.</div>';
+            }
+        });
+    </script>
+</body>
+</html>

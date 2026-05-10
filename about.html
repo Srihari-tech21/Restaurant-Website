@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>About - Authentic Indian Restaurant</title>
+    <style>
+        .header-bar {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .logo-container {
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            z-index: 10;
+        }
+        .logo-container img {
+            height: 80px;
+        }
+        .restaurant-name {
+            background-color: #ff6600;
+            padding: 15px 30px;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+            margin-left: 120px;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff6600 !important;
+        }
+        .about-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            border: 2px solid #ff6600;
+        }
+        .section-title {
+            color: #ff6600;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .feature-box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff6600;
+        }
+        .chef-card {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .chef-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ff6600;
+            margin-bottom: 15px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #ff6600;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Combined Header Bar - Logo and Restaurant Name -->
+    <div class="header-bar">
+        <div class="logo-container">
+            <img src="logo2.png" alt="Restaurant Logo">
+        </div>
+        <div class="restaurant-name">
+            AUTHENTIC INDIAN RESTAURANT
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrationform.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="about-container">
+            <h1 class="text-center mb-4" style="color: #ff6600;">About Authentic Indian Restaurant</h1>
+            
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <p class="lead">Where culinary tradition meets passion. Established in 2022, we have been serving authentic Indian cuisine that celebrates the rich diversity of flavors from across the Indian subcontinent.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2022 - The Beginning</h4>
+                    <p>Started as a small family restaurant with a vision to bring authentic Indian flavors to our community, inspired by grandmother's traditional recipes.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2024 - Expansion</h4>
+                    <p>Expanded our kitchen and team, introducing regional specialties from North, South, East, and West India with authentic cooking techniques.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2025 - Recognition</h4>
+                    <p>Awarded "Best Indian Restaurant" by the Culinary Association of India for our outstanding service and authentic flavors.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Present - Excellence</h4>
+                    <p>Continue to innovate while maintaining our commitment to traditional recipes, quality ingredients, and customer satisfaction.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title mt-5">Our Philosophy</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h4 style="color: #ff6600;">� Traditional Recipes</h4>
+                        <p>We preserve age-old family recipes passed down through generations, bringing you the true taste of Indian heritage.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h4 style="color: #ff6600;">👨‍🍳 Master Chefs</h4>
+                        <p>Our team of experienced chefs specialize in different regional Indian cuisines, ensuring each dish is prepared with expertise.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h4 style="color: #ff6600;">�️ Authentic Spices</h4>
+                        <p>We source our spices directly from Indian markets, ensuring the most authentic and aromatic flavors in every dish.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title mt-5">Meet Our Chefs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="chef-card">
+                        <img src="teja1.png" alt="Head Chef" class="chef-img">
+                        <h4 style="color: #ff6600;">Chef Teja Paruchuri</h4>
+                        <p>Head Chef & Owner</p>
+                        <p>20+ years of experience in North Indian and Mughlai cuisine</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="chef-card">
+                        <img src="chef2.jpg" alt="South Indian Specialist" class="chef-img">
+                        <h4 style="color: #ff6600;">Chef Varun Reddy</h4>
+                        <p>South Indian Specialist</p>
+                        <p>Expert in dosas, idlis, and traditional South Indian delicacies</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="chef-card">
+                        <img src="chef3.jpg" alt="Tandoor Master" class="chef-img">
+                        <h4 style="color: #ff6600;">Chef Ajay Singh</h4>
+                        <p>Tandoor Master</p>
+                        <p>Specializes in tandoori dishes and breads with 15+ years experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title mt-5">Our Specialties</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">� North Indian Curries & Kormas</li>
+                        <li class="mb-2">🥘 South Indian Dosas & Idlis</li>
+                        <li class="mb-2">� Tandoori Specialties</li>
+                        <li class="mb-2">� Traditional Biryani Varieties</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">� Fresh Indian Breads</li>
+                        <li class="mb-2">🥤 Traditional Indian Beverages</li>
+                        <li class="mb-2">� Authentic Indian Sweets</li>
+                        <li class="mb-2">�️ Regional Street Food</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
