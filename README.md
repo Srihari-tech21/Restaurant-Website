@@ -51,4 +51,4 @@ https://srihari-tech21.github.io/Restaurant-Website/
 
 ## 👨‍💻 Developed By
 
-Srihari
+Srihari ,bharath ,Varshitha, Rishitha 
